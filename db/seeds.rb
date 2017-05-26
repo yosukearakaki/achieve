@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 100.times do |n|
-    title = Faker::Pokemon.namer
+    title = Faker::Pokemon.name
     content = Faker::Twitter.status
     Blog.create!(title: title, 
                 content: content,
