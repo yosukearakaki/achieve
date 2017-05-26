@@ -1,7 +1,4 @@
 class ContactsController < ApplicationController
-  def new
-    @contact = Contact.new
-  end
 
   def create
     @contact = Contact.new(contacts_params)
@@ -23,7 +20,7 @@ class ContactsController < ApplicationController
     else
       @contact = Contact.new
     end
-  end
+    end
   
   private
     def contacts_params
