@@ -7,9 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 100.times do |n|
-    title = Faker::Pokemon.name
-    content = Faker::Twitter.status
-    Blog.create!(title: title, 
+    user_id = 1
+    title = Faker::Color.color_name
+    content = Faker::Lorem.sentence
+    Blog.create!(user_id: user_id,
+                title: title, 
                 content: content,
                 )
 end
