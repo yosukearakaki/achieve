@@ -36,7 +36,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'better_errors'
-
+  gem 'pry-rails'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
@@ -56,6 +56,7 @@ gem 'jquery-turbolinks'
 
 group :development do
   gem 'letter_opener_web'
+  gem 'dotenv-rails'
 end
 
 gem 'rails_admin'
@@ -63,3 +64,13 @@ gem 'rails_admin'
 gem 'cancan'
 
 gem 'activeresource'
+
+gem 'omniauth'
+
+gem 'omniauth-twitter'
+
+gem 'omniauth-facebook'
+
+gem 'carrierwave'
+
+gem 'rmagick'
