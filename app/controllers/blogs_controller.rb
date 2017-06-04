@@ -4,7 +4,6 @@ class BlogsController < ApplicationController
   
   def index
     @blogs = Blog.all
- #   binding.pry
   end
 
   def create
