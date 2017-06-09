@@ -38,6 +38,10 @@ Rails.application.routes.draw do
 
   resources :poems, only: [:index, :show]
 
+  resources :conversations do
+    resources :messages
+  end
+
 end
 
   # The priority is based upon order of creation: first created -> highest priority.
