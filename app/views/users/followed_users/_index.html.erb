@@ -1,0 +1,9 @@
+<ul>
+  <% followed_users.each do |followed_user| %>
+    <ul style="list-style:none;">
+      <li><%= profile_img(followed_user) %></li>
+      <li><%= followed_user.name %></li>
+      <li><%= followed_user.email %></li>
+    </ul>
+  <% end %>
+</ul>

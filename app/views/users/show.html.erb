@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<section class="users container-fluid">
+  <h2>ユーザー情報</h2>
+  <div class="container-child col-md-3 col-sm-6">
+    <p class="left"><%= link_to '戻る', users_path %></p>
+    <ul style="list-style:none;">
+      <li><%= profile_img(@user) if profile_img(@user) %></li>
+      <li><strong>ユーザー名</p></li>
+      <li><%= @user.name %></li>
+      <li><%= @user.email %></li>
+    </ul>
+  </div>
+</section>
+
+<section class="followers container-fluid">
+  <div class="row">
+    <h2>フォロワー一覧</h2>
+    <div class="col-md-3 col-sm-6">
+      <div id="followers_area">
+        <%= render partial: 'users/followers/index', locals: { followers: @followers, user: @user } %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="followed_users container-fluid">
+  <div class="row">
+    <h2>フォロイー一覧</h2>
+    <div class="col-md-3 col-sm-6">
+      <div id="followed_users_area">
+        <%= render partial: 'users/followed_users/index', locals: { followed_users: @followed_users, user: @user } %>
+      </div>
+    </div>
+  </div>
+</section>

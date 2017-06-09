@@ -1,0 +1,2 @@
+$("#followers_area").html("<%= j(render 'followers/index', { followers: @follower.user.followers, user: @follower.user }) %>")
+$(':text').val('')

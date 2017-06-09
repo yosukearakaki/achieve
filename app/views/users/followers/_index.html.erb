@@ -1,0 +1,9 @@
+<ul>
+  <% followers.each do |follower| %>
+    <ul style="list-style:none;">
+      <li><%= profile_img(follower) %></li>
+      <li><%= follower.name %></li>
+      <li><%= follower.email %></li>
+    </ul>
+  <% end %>
+</ul>
