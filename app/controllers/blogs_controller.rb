@@ -3,7 +3,7 @@ class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
   def index
-    @blogs = Blog.all
+    @blogs = Blog.all.order(created_at: :desc)
     respond_to do |format|
       format.html
       format.js
@@ -24,6 +24,7 @@ class BlogsController < ApplicationController
   def show
     @comment = @blog.comments.build
     @comments = @blog.comments
+    Notification.find(params[:notification_id]).update(read: true) if params[:notification_id]
   end
 
   def edit
