@@ -84,6 +84,7 @@ gem 'pusher'
 
 gem 'fog'
 
+gem 'dotenv-rails'
 gem 'unicorn'
 
 gem 'therubyracer', platforms: :ruby
